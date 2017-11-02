@@ -1,0 +1,53 @@
+<%#
+Company - KORESOL Software LLP
+Website - http://www.koresol.com
+About Company - KORESOL offers end to end web and mobile based customized ecommerce solutions. It has seasoned software programmers, having specialized skills and huge experience in web and mobile iOS and Android application development related technologies.
+What can you do with this code: KORESOL allows you to use the code mentioned within this file to learn and practice the concepts. You are also allowed to use this code within your software projects. However, if you are not allowed to use this code within any type of tutorials, books, ebooks or learnig material, without mentioning refrence to our website => www.koresol.com.
+Author  - Nitin Kore.
+Copyrights © 2017 All Rights Reserved by KORESOL Software LLP.
+%>
+
+
+<%= form_for @service,:url => update_service_path do |form| %>
+
+<table>
+  
+  <tbody>
+   <tr>
+    <td>  <%= form.label :name %> </td>
+    <td>  <%= form.text_field :name %> </td>
+ </tr>
+
+<tr>
+    <td>  <%= form.label :features %> </td>
+    <td>  <%= form.text_field :features %> </td>
+ </tr>
+
+<tr>
+    <td>  <%= form.label :price %> </td>
+    <td>  <%= form.text_field :price %> </td>
+ </tr>
+
+<tr>
+    <td>  <%= form.label :seller %> </td>
+    <td>  <%= form.text_field :seller %> </td>
+ </tr>
+
+<tr>
+    <td>  <%= form.label :seller_website %> </td>
+    <td>  <%= form.text_field :seller_website %> </td>
+ </tr>
+
+<tr>
+    <td>  <%= form.label :description %> </td>
+    <td>  <%= form.text_area :description %> </td>
+ </tr>
+
+  <tr>
+    <td>  <%= form.submit %> </td>
+ </tr>
+  </tbody>
+</table>
+<% end %>
+
+<%= link_to 'Back', service_index_path %>

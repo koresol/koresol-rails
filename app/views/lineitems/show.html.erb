@@ -1,0 +1,47 @@
+ <%#
+Company - KORESOL Software LLP
+Website - http://www.koresol.com
+About Company - KORESOL offers end to end web and mobile based customized ecommerce solutions. It has seasoned software programmers, having specialized skills and huge experience in web and mobile iOS and Android application development related technologies.
+What can you do with this code: KORESOL allows you to use the code mentioned within this file to learn and practice the concepts. You are also allowed to use this code within your software projects. However, if you are not allowed to use this code within any type of tutorials, books, ebooks or learnig material, without mentioning refrence to our website => www.koresol.com.
+Author  - Nitin Kore.
+Copyrights © 2017 All Rights Reserved by KORESOL Software LLP.
+%>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service name:</strong>
+  <%= @lineitem.service_name %>
+</p>
+
+<p>
+  <strong>Service features:</strong>
+  <%= @lineitem.service_features %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lineitem.description %>
+</p>
+
+<p>
+  <strong>Product price:</strong>
+  <%= @lineitem.product_price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @lineitem.quantity %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @lineitem.payment_method %>
+</p>
+
+<p>
+  <strong>Delivery date:</strong>
+  <%= @lineitem.delivery_date %>
+</p>
+
+<%= link_to 'Edit', edit_lineitem_path(@lineitem) %> |
+<%= link_to 'Back', lineitems_path %>

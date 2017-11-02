@@ -1,0 +1,77 @@
+ <%#
+Company - KORESOL Software LLP
+Website - http://www.koresol.com
+About Company - KORESOL offers end to end web and mobile based customized ecommerce solutions. It has seasoned software programmers, having specialized skills and huge experience in web and mobile iOS and Android application development related technologies.
+What can you do with this code: KORESOL allows you to use the code mentioned within this file to learn and practice the concepts. You are also allowed to use this code within your software projects. However, if you are not allowed to use this code within any type of tutorials, books, ebooks or learnig material, without mentioning refrence to our website => www.koresol.com.
+Author  - Nitin Kore.
+Copyrights © 2017 All Rights Reserved by KORESOL Software LLP.
+%>
+<%= form_with(model: order, local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!-- <div class="row"> -->
+  <table>
+  
+    
+    <tbody>
+      <tr>
+        <td> <%= form.label :order_number %></td>
+        <td><%= form.text_field :order_number, id: :order_order_number %></td>
+      </tr>
+        <tr>
+        <td> <%= form.label :service_name %></td>
+        <td><%= form.text_field :service_name, id: :order_service_name %></td>
+      </tr>
+       <tr>
+   <td>  <%= form.label :product_price %> </td>
+   <td>  <%= form.text_field :product_price, id: :order_product_price %> </td>
+  </tr>
+
+ <tr>
+   <td>  <%= form.label :seller %> </td>
+   <td>  <%= form.text_field :seller, id: :order_seller %> </td>
+  </tr>
+
+ <tr>
+   <td>  <%= form.label :seller_website %> </td>
+   <td>  <%= form.text_field :seller_website, id: :order_seller_website %> </td>
+  </tr>
+
+ <tr>
+   <td>  <%= form.label :address %> </td>
+   <td>  <%= form.text_field :address, id: :order_address %> </td>
+  </tr>
+
+ <tr>
+   <td>  <%= form.label :payment_method %> </td>
+   <td>  <%= form.text_field :payment_method, id: :order_payment_method %> </td>
+  </tr>
+
+ <tr>
+   <td>  <%= form.label :description %> </td>
+   <td>  <%= form.text_area :description, id: :order_description %> </td>
+  </tr>
+  
+<tr>
+   <td>  <%= form.label :service_id %> </td>
+   <td>  <%= form.text_field :service_id %> </td>
+  </tr>
+  
+  <div class="actions">
+   <td>  <%= form.submit %> </td>
+  </tr>
+    </tbody>
+  </table>
+
+
+<% end %>
+<!-- </div> -->
